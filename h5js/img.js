@@ -25,10 +25,11 @@ fileInput.addEventListener('change', function () {
     // 读取文件:
     var reader = new FileReader();
     reader.onload = function(e) {
-        var
-            data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+        var data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
         preview.style.backgroundImage = 'url(' + data + ')';
+        //console.log(data);
     };
     // 以DataURL的形式读取文件:
     reader.readAsDataURL(file);
+    console.log('zgy'+file);
 });
