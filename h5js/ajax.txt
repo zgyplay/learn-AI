@@ -1,3 +1,11 @@
-AJAX 不是新的编程语言，而是一种使用现有标准的新方法。
-<br>
+<h1>
+AJAX 不是新的编程语言，而是一种使用现有标准的新方法。<br>
 AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下
+</h2>
+ajax所包含的技术<br>
+   1.使用CSS和XHTML来表示。<br>
+   2. 使用DOM模型来交互和动态显示。<br>
+   3.使用XMLHttpRequest来和服务器进行异步通信。<br>
+   4.使用javascript来绑定和调用。<br>
+details: Ajax工作原理
+http://www.cnblogs.com/mingmingruyuedlut/archive/2011/10/18/2216553.html
