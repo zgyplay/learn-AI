@@ -30,23 +30,25 @@ function loadXMLDoc()
 }
 
 // 测试 Promise
-function randFunc() {
-    var timeOut = Math.random() * 2;
+
+// randFunc
+function randFunc(resolve, reject) {
+    var timeOut = Math.random() * 3;
     console.log('set time out:' + timeOut + ' second.');
     setTimeout(function (){
-        if(timeOut < 1){
+        if(timeOut < 1) {
             console.log('call resolve...');
             resolve('200 OK');
-        }
+            }
         else {
-            console.log('call reject...');
-            console.log('timeout in' + timeOut + ' second');
-        }
-    }, timeOut * 1000);
+                console.log('call reject...');
+                reject('timeout in' + timeOut + ' second');
+            }
+        }, timeOut * 1000);
 }
 
 function testPromise() {
-    new Promise(randFunc).then( function(result) {
+    new Promise(randFunc(resolve,reject)).then( function(result) {
             console.log('成功' + result);
         }
     ).catch( function(reason) {
