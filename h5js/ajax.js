@@ -38,21 +38,19 @@ function randFunc(resolve, reject) {
     setTimeout(function (){
         if(timeOut < 1) {
             console.log('call resolve...');
-            resolve('200 OK');
+             resolve(123);
             }
         else {
                 console.log('call reject...');
-                reject('timeout in' + timeOut + ' second');
+                 reject('zgy fail');
             }
         }, timeOut * 1000);
 }
 
 function testPromise() {
-    new Promise(randFunc(resolve,reject)).then( function(result) {
-            console.log('成功' + result);
-        }
-    ).catch( function(reason) {
-            console.log('失败' + reason);
-        }
-    );
+    new Promise(randFunc).then( function(successCallback){
+        console.log('print success callback:' + successCallback);
+    }).catch(function(failCallback){
+        console.log('print fail callback:' + failCallback);
+    });
 }
